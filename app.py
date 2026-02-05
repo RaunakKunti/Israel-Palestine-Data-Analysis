@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st 
 import matplotlib.pyplot as plt
 
+st.sidebar.title("Download CSV file from here: https://www.kaggle.com/datasets/emirslspr/israel-hamas-conflict-news-dataset")
 st.sidebar.title("Upload Dataset")
 upload_file = st.sidebar.file_uploader("coose CSV file",type='csv')
 
@@ -130,4 +131,5 @@ if upload_file is not None:
     st.subheader("Types of Ammunition")
     Ammunition_count = df.groupby(df["ammunition"]).size()
     st.write(Ammunition_count)
+
 
